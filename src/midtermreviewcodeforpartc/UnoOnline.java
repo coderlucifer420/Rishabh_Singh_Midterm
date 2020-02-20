@@ -41,9 +41,13 @@ public class UnoOnline
         int userCount=0;//keep track of number of users for array
         Scanner sc = new Scanner(System.in);
         UserNameValidator a= new UserNameValidator();
-        System.out.println("please enter your desired user name:");
-        String userName = sc.nextLine();
-        a.verify(userName);
+        int b;
+        String userName;
+        do{
+            System.out.println("please enter your desired user name:");
+            userName= sc.nextLine();
+            b= a.verify(userName); //checks for empty string
+        }while(b==1);
         boolean validPassword=false;
         String password="";
         while(!validPassword)

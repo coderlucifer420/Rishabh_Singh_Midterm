@@ -6,11 +6,13 @@ package midtermreviewcodeforpartc;
  */
 public class UserNameValidator {
     //String uname;
-    public void verify(String abc){
+    public int verify(String abc){
+        int x= 3;
         if("".equals(abc)){
-            System.out.println("Cannot be empty! Exiting program.");
-            System.exit(0);
+                System.out.println("Cannot be empty! Retry.");
+                x= 1;
         }
+        return x;
     }
 
 }
